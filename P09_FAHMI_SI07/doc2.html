@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 9.2</title>
+</head>
+<body>
+    <h1>Dollar ke Rupiah</h1>
+    <form> 
+        Dollar : <input type="number" id="dollar">
+        <br>
+        Kurs Rupiah <input type="number" id="rupiah" value="14650">
+        <br>
+        <input type="button" value="Hitung" onclick="hitung_dollar()" />
+        <br />
+        Hasil : <input type="text" id="hasil"> 
+    </form>
+
+    <script>
+        function hitung_dollar() {
+        let d = document.getElementById("dollar").value;
+        let r = document.getElementById("rupiah").value;
+        let hasil = d * r;
+
+        document.getElementById("hasil").value = "Rp." + hasil;
+        }
+    </script>
+
+    <form>
+    <h2>Rupiah ke Dollar</h2>
+    Rupiah : <input type="number" id="rupiah2">
+    <br>
+    <input type="button" value="Hitung" onclick="hitung_rupiah()" />
+    <br />
+    Dollar : <input type="text" id="hasil2">
+    </form>
+
+    <script>
+        function hitung_rupiah() {
+        let r = document.getElementById("rupiah2").value;
+        let hasil = r * (1/14650);
+            console.log(hasil);
+        document.getElementById("hasil2").value = "$" + hasil.toFixed(2);
+        }
+    </script>
+
+
+</body>
+</html>

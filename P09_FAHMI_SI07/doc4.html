@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 9.4</title>
+    <script>
+        function jumlah() {
+            let bilangan_1 = document.getElementById("bilangan1").value;
+            let bilangan_2 = document.getElementById("bilangan2").value;
+            hasil_var = parseInt(bilangan_1) + parseInt(bilangan_2);
+
+            let hasil = document.getElementById("hasil jumlah");
+            hasil.innerHTML = hasil_var;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="bilangan1" value="" onchange="jumlah()">
+    <br>
+    +
+    <br>
+    <input type="number" id="bilangan2" value="" onchange="jumlah()">
+    <br>
+    =
+    <br>
+    <span id="hasil jumlah"><input type="number" id="hasil jumlah"></span> 
+</body>
+</html>

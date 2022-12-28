@@ -1,0 +1,20 @@
+.required {  
+    color: red;
+ }
+  
+ .errorMsg {  
+    color: red;
+ }
+  
+ .errorBox {  
+    border: 2px solid red;
+ }
+  
+ table {
+    border: 0;
+ }
+  
+ td {
+    margin: 0;
+    padding: 3px 10px;
+ }

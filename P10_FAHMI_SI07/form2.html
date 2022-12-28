@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="JSFormValidation.css">
+  <script src="JSFormValidation.js"></script>
+</head>
+ 
+<body>
+  <h2>FAHMI ALHAFIZH'S VALIDATION FORM</h2>
+ 
+  <form id="formTest" method="get" action="processData">
+    <table>
+    <tr>
+        <td><label for="txtName">Nama Pelanggan<span class="required">*</span></label></td>
+        <td><input type="text" id="txtName" name="name"></td>
+        <td id="elmNameError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+        <td><label for="txtEmail">Email Pelanggan<span class="required">*</span></label></td>
+        <td><input type="text" id="txtEmail" name="email"></td>
+        <td id="elmEmailError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+        <td><label for="txtPhone">Nomor Telepon<span class="required">*</span></label></td>
+        <td><input type="text" id="txtPhone" name="phone"></td>
+        <td id="elmPhoneError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+      <td>Negara<span class="required">*</span></td>
+      <td><select id="selCountry" name="country">
+            <option value="" selected>Dari Mana Asalmu ?</option>
+            <option value="AA">AA</option>
+            <option value="BB">BB</option>
+            <option value="CC">CC</option>
+          </select></td>
+      <td id="elmCountryError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+      <td>Jenis Kelamin<span class="required">*</span></td>
+      <td><label><input type="radio" name="gender" value="m">Laki-laki</label>
+          <label><input type="radio" name="gender" value="f">perempuan</label></td>
+      <td id="elmGenderError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+      <td><label for="txtPhone">Tujuan Keberangkatan<span class="required">*</span></label></td>
+      <td><input type="text" id="txtPhone" name="phone"></td>
+      <td id="elmPhoneError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+      <td><label for="txtEmail">Jam Keberangkatan<span class="required">*</span></label></td>
+      <td><input type="time" id="txtEmail" name="email"></td>
+      <td id="elmEmailError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+      <td><label for="txtPWVerified">Jumlah Tiket<span class="required">*</span></label></td>
+      <td><input type="number" id="txtPWVerified" name="pwVerified"></td>
+      <td id="elmPWVerifiedError" class="errorMsg">&nbsp;</td></tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" value="KIRIM" id="btnSubmit">&nbsp;
+          <input type="reset" value="RESET" id="btnReset"></td>
+      <td>&nbsp;</td></tr>
+    </table>
+  </form>
+</body>
+</html>

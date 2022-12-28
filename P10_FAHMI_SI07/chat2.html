@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <style type="text/css">
+        * { 
+            padding:0px; 
+            margin:0px; 
+          }
+        body{
+            font-family:arial;
+            font-size:13px
+             }
+        #chatbox {
+            width:300px; 
+            border:1px solid whitesmoke;
+            margin:1px;  
+            position: absolute; 
+            min-height: 300px;
+            }
+        #chatbox > h3 { 
+                        background-color:lightblue; 
+                        padding:5px; color:whitesmoke; 
+                    }
+        #chat { 
+                max-height:220px; 
+                overflow-y:auto; 
+                max-width:350px; 
+               }
+        #chat > ul > li { 
+                          padding:3px;
+                          clear:both;
+                          padding:4px;
+                          margin:10px 0px 5px 0px;
+                          overflow:auto 
+                      }
+        #messages{ 
+                list-style:none
+                 }
+        #messages > li > img { 
+                            width:35px;
+                            float:left 
+                        }
+        #messages > li > span { 
+            width:200px;
+            float:left;
+            margin-left:5px;
+            word-wrap: break-word; 
+            background: lightblue;
+            padding: 3%; 
+            color: white; 
+            border-radius: 10px;
+        }
+        #chatdata { 
+            padding:9px; 
+            border-radius:5px; 
+            border:1px solid grey;
+            width:280px;  
+            height: 35px; 
+        }
+        #send { 
+            padding: 4px; 
+            border: solid 1px gray; 
+            background-color: blue;
+            color:cornsilk;
+            font-weight:bold 
+           }
+        .inputbox{
+            position: absolute; 
+            bottom: 0; 
+        }
+        </style>
+        <script 
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+        </script>
+        <script type="text/javascript">
+        $(function(){
+        
+        $('.chatdata').keypress(function (e) {
+            if (e.which == 13) {
+                sendmsg();
+            }
+        });
+        
+        var height = 0;
+        $('#messages li').each(function(i, value){
+            height += parseInt($(this).height());
+        });
+        height += '1';
+        $('#chat').animate({scrollTop: height});
+        });
+        
+        
+        $("#chatData").focus();
+        
+        function sendmsg() {
+            var a = $("#chatdata").val().trim();
+            if(a.length > 0){
+            $("#chatdata").val('');
+            $("#chatdata").focus();
+            $("<li></li>").html('<img src="arun.jpg"/><span>'+a+'</span>').appendTo("#messages");
+            $("#chat").animate({"scrollTop": $('#chat')[0].scrollHeight},
+        "slow");
+            }
+        }
+        </script>
+</head>
+<body>
+    <div style='margin:0 auto; width:15%;'>
+        <div id='chatbox' style='margin-top:20px'>
+                <h3>MI CHAT'S APP</h3>
+                <div id='chat'>
+                    <ul id='messages'>
+                        <li>
+                            <img src="singa.jpg"/>
+                            <span>Hollaa !</span>
+                        </li>
+                        <li>
+                            <img src="gorilla.jpg"/>
+                            <span>Welcome to MI CHAT'S APP</span>
+                        </li>
+                        <li>
+                            <img src="elang.jpg"/>
+                            <span>Merhabaa</span>
+                        </li>
+                    </ul>
+                </div>
+                <div  class="inputbox">
+                <input type="text" id="chatdata" class="chatdata" placeholder="Ketik Pesan" />
+                
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan</title>
+</head>
+<body>
+    <h1>Krusty Krab</h1>
+
+    <p>
+        Pizza yang dibakar dengan kayu bakar pilihan kami tersedia untuk pengiriman. Ayo pesan pizza dengan topping favorit kamu dan akan langsung kami antar!
+    </p>
+
+    <form action="thankyou.html" method="post">
+        <fieldset>
+            <legend>Informasi Kamu</legend>
+            <table style="border-spacing: 0;text-align: end;" >
+                <tbody align="left">
+                    <tr>
+                        <td>Nama:</td>
+                        <td><input required type="text" name="nama"></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat:</td>
+                        <td><input required type="text" name="alamat"></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon:</td>
+                        <td><input required type="number" style="letter-spacing: 2px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email"></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;">Instruksi Pengiriman:</td>
+                        <td><textarea name="" id="" cols="30" rows="5" placeholder="No more than 150 characters long" maxlength="150"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <b>Desain pizza impian kamu</b><br>
+                Spesifikasi Pizza
+            </legend>
+            Pinggiran (pilih salah satu):
+            <ul style="list-style: none;">
+                <li>
+                    <input type="radio" name="pinggiran" id="class_white">
+                    <label for="class_white">Classic White</label> 
+                </li>
+                <li>
+                    <input type="radio" name="pinggiran" id="multigrain">
+                    <label for="multigrain">Multigrain</label>
+                </li>
+                <li>
+                    <input type="radio" name="pinggiran" id="cheese-stuffed">
+                    <label for="cheese-stuffed">Cheese-stuffed crust</label> 
+                </li>
+                <li>
+                    <input type="radio" name="pinggiran" id="gluten_free">
+                    <label for="gluten_free">Gluten-free</label>
+                </li>
+            </ul>
+            Topping (pilih semuanya terserah kamu)
+            <ul type="none">
+                <li>
+                    <input type="checkbox" name="topping" id="red_sauce" checked>
+                    <label for="red_sauce">Red sauce</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id="white_sauce"><label for="white_sauce">White sauce</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id="mozzarella">
+                    <label for="mozzarella">Mozzarella</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id=pepperoni>
+                    <label for=pepperoni>Pepperoni</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id="mushroom"><label for="mushroom">Mushroom</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id=pepper><label for=pepper>Pepper</label>
+                </li>
+                <li><input type="checkbox" name="topping" id=anchovies><label for=anchovies>Anchovies</label></li>
+            </ul>
+            Number <br>
+            How many pizzas: <input type="number" name="number" id="number" min="1">
+            <a href="http://localhost/web%20ku%20Ti04/praktikum03/succes.html"><button>bring me pizza</button></a>
+            <a href="thank you.html"><button type="reset">submit</button></a>
+
+        </fieldset>
+    </form>
+</body>
+</html>
